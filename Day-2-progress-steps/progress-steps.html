@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="progress-steps.css">
+    
+    <title>Progress Steps</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="pro-con">
+            <div class="pro" id="pro"></div>
+            <div class="cir active">1</div>
+            <div class="cir">2</div>
+            <div class="cir">3</div>
+            <div class="cir">4</div>
+        </div>
+        <button class="btn" id="pre" disabled>Pre</button>
+        <button class="btn" id="next">Next</button>
+    </div>
+    <script src="progress-steps.js"></script>
+    <!-- <script>
+        const pro = document.getElementById('pro')
+        const pre = document.getElementById('pre')
+        const next = document.getElementById('next')
+        const cirs = document.querySelectorAll('.cir')
+
+
+        let currentActive = 1
+
+        next.addEventListener('click', () => {
+            currentActive++
+
+            if (currentActive > cirs.length) {
+                currentActive = cirs.length
+            }
+            update()
+            // console.log(currentActive)
+        })
+
+        pre.addEventListener('click', () => {
+            currentActive--
+
+            if (currentActive < 1) {
+                currentActive = 1
+            }
+            update()
+            // console.log(currentActive)
+        })
+
+        function update() {
+            cirs.forEach((cir, indx) => {
+                if (indx < currentActive) {
+                    cir.classList.add('active')
+                } else {
+                    cir.classList.remove('active')
+                }
+            })
+
+            const actives = document.querySelectorAll('.active')
+
+            pro.style.width = (actives.length - 1) / (cirs.length - 1) * 100 + '%'
+
+            if (currentActive === 1) {
+                pre.disabled = true
+            } else if (currentActive === cirs.length) {
+                next.disabled = true
+            } else {
+                pre.disabled = false
+                next.disabled = false
+            }
+
+
+
+        }
+    </script> -->
+</body>
+
+</html>
